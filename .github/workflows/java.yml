@@ -1,0 +1,24 @@
+name: Java CICD
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-verion: '17'
+      - name: Compaile Java Program
+        run: javac HelloWorld.java
+
+      - name: Run Java program 
+        run: java HelloWorld
+      
+      
