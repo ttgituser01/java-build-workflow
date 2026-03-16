@@ -16,7 +16,8 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-        
+      - name: list file
+        run: ls -lrt; pwd
       - name: Compaile Java Program
         run: javac HelloWorld.java
 
