@@ -1,4 +1,4 @@
-name: Java CICD
+name: Compaile-and-run
 on:
   push:
     branches:
@@ -10,11 +10,10 @@ jobs:
     steps:
       - name: Checkout Source Code
         uses: actions/checkout@v4
-
+      
       - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          java-verion: '17'
+        uses: actions/setup-java@v5.2.0
+        
       - name: Compaile Java Program
         run: javac HelloWorld.java
 
