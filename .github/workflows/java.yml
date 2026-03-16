@@ -12,10 +12,10 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Setup Java
-        uses: actions/setup-java@v5.2.0
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: 'latest'
+          java-version: '17'
         
       - name: Compaile Java Program
         run: javac HelloWorld.java
